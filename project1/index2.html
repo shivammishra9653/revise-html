@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="question" style="background-color:brown; color:white">
+            <p>What is capital of India?</p>
+            <ol>
+                <li> New Delhi</li>
+                <li> Mumbai</li>
+                <li> Kolkata</li>
+                <li> Banglore</li>
+            </ol>
+    </div>
+
+    <button type="button" id="mybtn" onclick="toggleQuestion()" style="color: white; background-color: green;">Hide/Unhide Question</button>
+
+    <script>
+        let toggleQuestion = function(){
+            let x = document.getElementById("question");
+
+            if(x.style.visibility == "visible"){
+                x.style.visibility = "hidden";
+            }else{
+                x.style.visibility = "visible";
+            }
+        }
+    </script>
+</body>
+</html>

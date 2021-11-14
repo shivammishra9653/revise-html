@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="card" style="width: 250px;">
+           <div class="card-body bg-dark">
+               <h5 class="card-title text-white">Sorted Array</h5>
+               <h6 class="card-subtitle text-white">Enter the array element</h6>
+               <input type="text" name="arrayInput" id="myInput">
+               <button onclick="sortArray()" class="bg-success text-white">click for Sort</button>
+
+           </div> 
+        </div>
+   </div>
+
+   <script>
+      let sortArray = function(){
+          let inp = document.getElementById("myInput");
+          let arr = inp.value.trim().split(" ");
+          arr.forEach((item, index, arr) => {
+              arr[index] = parseInt(item);
+          });
+          arr.sort();
+          let ans = "";
+          arr.forEach((item) => {
+              ans = ans + item + " "; 
+          });
+          
+          inp.value = ans;
+      }
+   </script>
+</body>
+</html>

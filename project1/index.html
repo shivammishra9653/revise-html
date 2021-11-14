@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+  
+    <div style="display: flex; justify-content: center; margin: 10px">
+        <input type="text" name="inputNumbers" id="myInput" style="border: 2px groove white; color: white; background-color: black;">
+    </div>
+
+    <div style="display: flex; justify-content: center; margin: 10px">
+        <input type="text" name="inputNumbers" id="myInput2" style="border: 2px groove white; color: white; background-color: black;">
+    </div>
+
+    <div style="display: flex; justify-content: center; margin: 10px">
+        <button type="button" onclick="makeArr()" id="mybtn" style="background-color:green; color: white">Click me</button>
+   </div>
+<!--
+    <div style="display: flex; justify-content: center; margin: 10px">
+        <button type="button" onclick="copyValue()" id="mybtn2" style="background-color:green; color: white">copy value</button>
+   </div>
+
+-->
+    <script>
+        
+        let makeArr = function(){
+             let y = document.getElementById("myInput").value;
+            let x = y.trim().split(" ");
+            console.log(x);
+            x.forEach((item, index, x) => {
+               x[index] = parseInt(item);
+            });
+            console.log(x);
+            let i, j;
+            for(i = 1; i < x.length; i++){
+                let key = x[i];
+                j = i - 1;
+                while(j >= 0 && x[j] > key){
+                    x[j+1] = x[j];
+                    j--;
+                }
+                x[j+1] = key;
+            }
+            console.log(x);
+            let ans = "";
+            x.forEach((item, index, x) => {
+                ans = ans + x[index] + " ";
+            });
+           let sorted = document.getElementById("myInput2");
+           sorted.value = ans;
+        }
+
+        
+    </script>
+</body>
+</html>

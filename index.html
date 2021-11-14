@@ -1,0 +1,15 @@
+<script>
+  let str = "madam";
+  let i = 0, j = str.length-1;
+  let flag = true;
+  while(i < j){
+      if(str.charAt(i) !== str.charAt(j)){
+          flag = false;
+          break;
+      }
+      i++; j--;
+  }
+  if(flag){
+      console.log(str + " is a palindrome string");
+  }
+</script>

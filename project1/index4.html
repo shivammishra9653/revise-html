@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="display:flex; justify-content: center; margin:10px;">
+        <input type="text" id="myInput" style="color:white; background-color:black; font-weight: 90px;">
+    </div>
+    <div style="display: flex; justify-content: center;">
+        <button style="background-color: green; color: white;" onclick="addInput()">Add Input</button>
+    </div>
+
+    <script>
+        let arr_inp = [];
+        let addInput = function(){
+            let inp = document.getElementById("myInput").value;
+           if(inp !== "")
+           { 
+               arr_inp.push(parseInt(inp));
+            console.log(arr_inp);
+        }
+        }
+        
+    </script>
+</body>
+</html>
